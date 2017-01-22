@@ -8,6 +8,7 @@
 \usepackage{array}
 \usepackage{xspace}
 \usepackage{hyperref}
+\usepackage{todonotes}
 \setlength{\parindent}{0cm}
 %\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 
@@ -69,7 +70,7 @@
      \Huge\textsf{#1}\par\vspace{1cm}\hrule\vspace{1cm} \endgroup
   \skip@34\p@ \advance\skip@-\normalbaselineskip
   \vskip\skip@ }
-  
+
 \def\@makeschapterhead#1{%\global\topskip 7.5pc\relax
   \begingroup
   \fontsize{\@xivpt}{18}\sffamily\scshape\centering
