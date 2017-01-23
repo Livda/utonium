@@ -1,4 +1,4 @@
-\LoadClass[10pt,a4paper,openany]{book}
+\LoadClass[12pt,a4paper,openany]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[frenchb]{babel}
 \usepackage{ucs}
