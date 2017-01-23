@@ -11,11 +11,12 @@ comparer les résultats de l'éxecution du code compilé avec les résultats att
 
 Leur approche est résumé dans la figure \ref{codegen}.
 
-\begin{figure}[!ht]
-	\label{codegen}
+
+\begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{images/codegen.png}
 	\caption{Schéma de l'approche de Sturmer}
+	\label{codegen}
 \end{figure}
 
 %Principaux points (json)
@@ -30,6 +31,28 @@ attendu en fin d'éxecution. Le but alors est de vérifier que le code généré
 des cas de tests est laissé à l'utilisateur de notre logiciel. Cette approche est certes moins strict qu'une analyse statique du programme généré par
 le compilateur, comme le fait le compilateur XTend, mais permet d'obtenir des résultats tout aussi interessant.
 
-%Documentation
+Nous fournissons deux modes pour tester un logiciel. Le premier mode est le plus simple, il suffit de fournir un fichier json bien formatté
+ainsi que les fichiers nécessaires à la génération pour que le programme lance les tests et donne le résultat dans la console (cf Figure \ref{mode1}).
+
+La seconde solution est plus contraignante, mais des développeurs courageux qui rechercheraient plus de précision ou de flexibilité dans les tests,
+peuvent utiliser et étendre les interfaces de compilation et les parsers disponibles. Les résultats seront les mêmes mais néanmoins
+
+\begin{figure}
+\begin{lstlisting}
+francois@epona ~/insa/magienoire % java -jar Bubbles.jar sample.json
+[1/4] : OK
+[2/4] : OK
+[3/4] : OK
+[4/4] : FAIL
+        expected : "Intended fail" but got : "\nHello world !!"
+\end{lstlisting}
+\caption{Utilisation du jar}
+\label{mode1}
+\end{figure}
 
 %Software engineering
+
+En ce qui concerne la gestion de projet, nous avons utilisé un dépot git pour la gestion de code étant donné que le CRI de l'insa fournit une
+instance de gitlab gratuitement aux étudiants avec un nombre illimité de dépots privés. En ce qui concerne la documentation, étant donné que le code
+est en JAVA, nous avons utilisé la javadoc, qui est générable par quiconque à accès au code. En ce qui concerne les itérations de développement,
+nous avons développé les feature de notre logiciel par couche et testé notre logiciel avec lui-même. Les tests ont évolués en même temps que le logiciel.
