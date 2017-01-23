@@ -1,22 +1,12 @@
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-Au cours de ces dernières années, les techniques émergentes de l’ingénierie des modèles et de la programmation générative se sont bien mis en place dans l’industrie afin de faciliter le développement logiciel.
+A l'heure actuelle, dans un monde où l'on cherche à aller toujours plus vite et à développer des applications sans connaissances en code, les générateurs sont devenus une alternative aux développeurs. Mais même pour les développeurs, générer du code est un moyen rapide et sûr d'avoir une base saine et normalement sans bug pour leur futures applications. Il existe de nombreux outils de générations (comme ceux dans la liste \cite{liste_generateurs}) et tous ne couvrent pas les mêmes champs. Certains servent à générer des squelettes de plus en plus poussés à partir de schémas UML, d'autre de permettre de générer du code \jv à partir de Python, etc.
 
-La génération automatique de code source par exemple, est une opération permettant de générer automatiquement du code source à partir d’une spécification haut-niveau. Son but est de simplifier et automatiser la production de code source répétitif afin de minimiser les risques d'erreurs de programmation et soulager le développeur de certaines phases de développement, parfois lourde complexe.
+Dans cette phase d'utilisation intensive de code généré, il est important de s'assurer que ce code est bel et bien fonctionnel. Le but étant de décharger le développeur d'écriture de certaines phases de développement, parfois lourde, complexes ou répétitives. Dans cet esprit d'optimisation du temps et de réduction des erreurs, des outils de vérifications et de contrôle sont nécessaires.
 
-En effet, la plupart des outils et environnements de développement aujourd’hui, fournissent différents types de générateurs de code (voir liste \cite{liste_generateurs}). Par exemple, un des types phares de générateurs, il y a ceux qui prennent comme entrée une définition abstraite (p.ex, UML, Ecore, etc) et génèrent du code source ou des exécutables vers différentes plateformes d’exécution logicielle (p.ex., Java, C\#, C/C++, etc).
+Une des solutions serait de faire des tests unitaires de toutes les fonctions générées dans le générateur. Un des inconvénients de cette méthode est son temps de mise en place beaucoup trop conséquent. Tester le code généré de cette manière reviendrait à perdre tous les bénéfices de la génération.
 
-La génération automatique de source code est certe efficaces pour améliorer la production logicielle. Cependant, les développeurs de générateurs de code manquent d’outils de test et vérification du processus de génération de code. Une simple méthode de test de générateurs est de vérifier le bon fonctionnement des différents artifacts logiciel générés. Il s’agit donc de décrire des test unitaires pour les programmes générés dans différents langages . Cette manière de faire requiert beaucoup de temps et nécessite une maîtrise des langages de programmation cibles.
-En outre, un générateur de code “non-mature” peut violer certaines propriétés non-fonctionnelles QoS et affecter la qualité du logiciel généré (i.e., temps d'exécution relativement long, utilisation intensive de la mémoire et CPU, etc). En effet, certains services générés peuvent être déployés et exécutés sur différentes plateformes hétérogènes et distribuées (p.ex., internet des objets, capteurs, Cloud, mobile, web, etc.). Cependant, ces plateformes d’exécution sont généralement dotées de ressources très limitées et prennent en compte plusieurs contraintes variées tel que l’espace mémoire restreint, la consommation d’énergie, etc. Ainsi, certaines contraintes non-fonctionnelles peuvent empêcher la bonne exécution et la performance de ces services.
+C'est dans cette optique que nous avons fait notre projet. Nous avons dû développer un outil de test automatique des générateurs de code.
 
-\hspace{15pt}
-
-Ce projet a pour but de développer un outil de test automatique des générateurs de code. Nous pouvions choisir de tester des générateurs proposés dans \cite{liste_generateurs}. Nous avons choisi d'utiliser Java et ses modules JUnit pour tester les générateurs suivants :
-
-\todo{Fixer les générateurs}
-\begin{itemize}
-    \item javac,
-    \item elvm,
-    \item un autre à voir plus tard.
-\end{itemize}
+Ainsi, notre testeur utilise des fichiers .json \todo{je sais plus quoi dire}
