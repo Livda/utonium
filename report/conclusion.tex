@@ -1,2 +1,8 @@
 \chapter*{Conclusion}
 \addcontentsline{toc}{chapter}{Conclusion}
+
+En conclusion, nous avons réalisé un programme de tests de générateurs de code capable de compiler du code avec un compilateur fournit par l'utilisateur.
+Ca code sera ensuite compilé et le résultat de l'éxecution comparé avec le résultat attendu par l'utilisateur. Nous avons pris le partie de
+comparer les résultats de l'execution du code plutot que le code généré lui-même car cela offre une plus grande souplesse au développeur
+du générateur et au développeur des tests. On suppose que si le code généré, produit le bon résultat une fois éxecuté, alors le code est valide.
+Le problème qui survient alors est comment tester suffisement pour avoir le même niveau de certitude que l'analyse statique du code généré. 

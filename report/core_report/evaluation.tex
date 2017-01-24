@@ -1,13 +1,16 @@
 \chapter{Évaluation}
 
-Ce testeur permet le test de nombreux générateurs de code. De par sa nature assez
-flexible avec un simple .json à lire, notre logiciel est très versatile.
+Pendant le développement de notre programme, nous avons utilisé nos propres appels aux différents compilteurs que nous utilisons. Il s'agit de petits
+tests qui assurent que notre programme se déroule bien et que les fonctions basique de notre programme soient stables. Cela nous a permis d'optimiser
+notre temps en écrivant à la fois les tests de notre logiciel et une évaluation de notre logiciel. Nous avons aussi décider de tester le projet 
+d'autres étudiants, Moolinet. Nous avons donc écris des cas de tests dans le langage qu'ils ont défini pour tester la compilation de ceux-ci l'éxecution
+dans leur fuzzer.
 
-Les performances de ce testeur vont grandement dépendre des tests faits, comme
-nous faisons des tests dynamiques, l'exécution des programmes est nécessaire.
-Et si le programme généré met très longtemps à répondre, alors notre testeur sera
-très lent. Mais sachant que souvent, on cherche à tester juste des fonctionnalités
-basiques, il ne devrait pas y avoir trop de problèmes.
+
+Les performances de notre testeur vont dépendre quasiement uniquement des appels aux différents compilateurs, le point
+qui peut prendre le plus de temps est la compilation et l'éxecution du code. Mais sachant que la pluaprt du temps,
+on cherche à garder des tests les plus petits possibles, pour cibler le plus précisment un bug, les temps s'éxecution des programmes est 
+relativment faible.
 
 Le passage à l'échelle n'est pas pris en compte dans notre solution, mais il pourrait
 l'être si l'on parallélise les appels système. Ainsi, un cluster de calculateurs
