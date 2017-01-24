@@ -1,17 +1,23 @@
 \chapter*{Conclusion}
 \addcontentsline{toc}{chapter}{Conclusion}
 
-Dans le cadre du cours de Test logiciel nous avons donc été amener à developper
-une application permettant de tester le code généré par de multiple générateurs.
+Dans le cadre du cours de Test logiciel nous avons donc été amenés à développer
+une application permettant de tester le code généré par de multiples générateurs.
 
-Nous projet s'est contruit autour de deux points centraux :
+Nous projet s'est construit autour de deux points centraux :
 
 \begin{itemize}
     \item la facilité de génération des tests ;
-    \item une comptatibilité avec le plus de générateurs possibles.
+    \item une compatibilité avec le plus de générateurs possible.
 \end{itemize}
 
-Au final notre solution est utilisable grace à un .jar et à un fichier .json dont
-la sytaxe est simpliée au maximum. Java permet une utilisation sur tous les
-sytèmes d'exploitations et donc d'avoir une solution portable tout aussi simplement
+Nous avons donc réalisé un programme de tests de générateurs de code capable de compiler du code avec un compilateur fourni par l'utilisateur.
+Ce code sera ensuite compilé et le résultat de l’exécution comparé avec le résultat attendu par l'utilisateur. Nous avons pris le partie de
+comparer les résultats de l’exécution du code plutôt que le code généré lui-même, car cela offre une plus grande souplesse au développeur
+du générateur et au développeur des tests. On suppose que si le code généré, produit le bon résultat une fois exécuté, alors le code est valide.
+Le problème qui survient alors est comment tester suffisamment pour avoir le même niveau de certitude que l'analyse statique du code généré.
+
+Au final notre solution est utilisable grâce à un .jar et à un fichier .json dont
+la syntaxe est simplifiée au maximum. Java permet une utilisation sur tous les
+systèmes d'exploitation et donc d'avoir une solution portable tout aussi simplement
 que l'est son utilisation.
